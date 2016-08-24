@@ -1,0 +1,42 @@
+  {
+  "name": "testservice",
+  "base_url": "http://localhost:8080",
+  "description": "Documentation for a Hello Service API",
+  "info": {
+    "contact": {
+      "name": "John Smith",
+      "email": "john@smith.com",
+      "url": "http://smith.com"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  },
+  "apidoc": {"version":"0.11.23"},
+  "models": {
+    "helloes": {
+      "description": "greets you",
+      "fields": [
+        { "name": "messagetype", "type": "string", "description": "the type of message", "example": "xiao"},
+        { "name": "message", "type": "string"}
+      ]
+    }
+  },
+  "resources": {
+    "helloes": {
+      "operations": [
+        {
+          "method": "GET",
+          "path": "/hello",
+          "description": "description of GET",
+          "responses": {
+            "200": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
